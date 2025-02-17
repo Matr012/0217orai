@@ -12,11 +12,11 @@ namespace _0217orai.Models
         public string ValaszA { get; set; }
         public string ValaszB { get; set; }
         public string ValaszC { get; set; }
-        public int HelyesValasz { get; set; }
+        public string HelyesValasz { get; set; }
        
         public string? FelhValasz { get; set; }
 
-        public Kerdes(string kerdesSzovege, string valasza, string valaszb, string valaszc, int helyesValasz)
+        public Kerdes(string kerdesSzovege, string valasza, string valaszb, string valaszc, string helyesValasz)
         {
             KerdesSzovege = kerdesSzovege;
             ValaszA = valasza;
@@ -24,6 +24,18 @@ namespace _0217orai.Models
             ValaszC = valaszc;
             HelyesValasz = helyesValasz;
             
+        }
+        public bool ValaszEllenorzes()
+        {
+            if (FelhValasz == null)
+            {
+                return false;
+            }
+            if (FelhValasz == HelyesValasz)
+            {
+                return true;
+            }
+            return false;
         }
     }
 

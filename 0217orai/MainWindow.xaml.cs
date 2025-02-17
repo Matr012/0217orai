@@ -9,6 +9,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using Microsoft.Win32;
+using _0217orai.Models;
 
 namespace _0217orai
 {
@@ -17,7 +19,8 @@ namespace _0217orai
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+        static List<Kerdes> kerdesek = new List<Kerdes>();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -53,5 +56,23 @@ namespace _0217orai
         {
 
         }
+        private static void BetoltesClick(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                string filename = openFileDialog.FileName;
+                string[] lines = File.ReadAllLines(filename);
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    string[] parts = lines[i].Split(';');
+                    Kerdes kerdes = new Kerdes(parts[0], parts[1], parts[2], parts[3], parts[4]);
+                    kerdesek.Add(kerdes);
+                }
+            }
+
+        }
     }
+
 }
