@@ -14,6 +14,7 @@ namespace _0217orai.Models
         public string ValaszC { get; set; }
         public int HelyesValasz { get; set; }
        
+        public string? FelhValasz { get; set; }
 
         public Kerdes(string kerdesSzovege, string valasza, string valaszb, string valaszc, int helyesValasz)
         {
