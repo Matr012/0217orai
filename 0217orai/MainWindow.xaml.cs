@@ -36,5 +36,20 @@ namespace _0217orai
         {
 
         }
+
+        private void Valaszmentes_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Elozo_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Kovetkezo_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
