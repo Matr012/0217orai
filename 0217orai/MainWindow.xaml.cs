@@ -20,5 +20,21 @@ namespace _0217orai
         {
             InitializeComponent();
         }
+
+        private void Betoltes_Click(object sender, RoutedEventArgs e)
+        {
+
+
+        }
+
+        private void Kilepes_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Kiertekeles_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
