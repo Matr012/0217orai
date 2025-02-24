@@ -1,0 +1,5 @@
+Melyik évben született József Attila?;1905;1883;1920;1905
+Melyik versét írta József Attila?;Tiszta szívvel;Himnusz;Szózat;Tiszta szívvel
+Hol született József Attila?;Budapest;Makó;Fiume;Budapest
+Mi volt édesanyja neve?;Pőcze Borbála;Szendrey Júlia;Tóth Ilona;Pőcze Borbála
+Melyik egyetemre járt?;Szegedi Tudományegyetem;ELTE;Debreceni Egyetem;Szegedi Tudományegyetem

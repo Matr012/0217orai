@@ -5,41 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_0217orai"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Irodalmi Kvíz" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="191*"/>
-            <ColumnDefinition Width="609*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="21*"/>
+            <RowDefinition Height="79*"/>
+            <RowDefinition Height="355*"/>
         </Grid.RowDefinitions>
         <DockPanel Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Background="LightGray">
-
-            <Button DockPanel.Dock="Top" Content="Betöltés" Margin="5" VerticalAlignment="Top" Click="Betoltes_Click">
-                
-            </Button>
-            <Button DockPanel.Dock="Bottom" Content="Kilépés" Margin="5" Click="Kilepes_Click" VerticalAlignment="Bottom">
-                
-            </Button>
-
-            <Button DockPanel.Dock="Top" Content="Kiértékelés" Margin="5" Click="Kiertekeles_Click" VerticalAlignment="Top">
-                
-            </Button>
+            <Button DockPanel.Dock="Top" Content="Betöltés" Margin="5" Click="Betoltes_Click"/>
+            <Button DockPanel.Dock="Bottom" Content="Kilépés" Margin="5" Click="Kilepes_Click"/>
+            <Button DockPanel.Dock="Top" Content="Kiértékelés" Margin="5" Click="Kiertekeles_Click"/>
             <TextBlock Text="Eredmény" Background="Beige" x:Name="tbkEredmeny"/>
         </DockPanel>
-        <TextBlock Grid.Column="1" x:Name="tbKerdesSzovege"/>
+        <TextBlock Grid.Column="1" Grid.Row="0" x:Name="tbkKerdesSzovege" Text="Kérdés szövege" Background="LightGray"/>
         <StackPanel Grid.Column="1" Grid.Row="1">
-            <RadioButton GroupName="Valaszok" Name="ValaszA" Margin="3" Content="A)"/>
-            <RadioButton GroupName="Valaszok" Name="ValaszB" Margin="3" Content="B)"/>
-            <RadioButton GroupName="Valaszok" Name="ValaszC" Margin="3" Content="C"/>
+            <RadioButton GroupName="Valaszok" Name="ValaszA" Content="A)" Margin="5"/>
+            <RadioButton GroupName="Valaszok" Name="ValaszB" Content="B)" Margin="5"/>
+            <RadioButton GroupName="Valaszok" Name="ValaszC" Content="C)" Margin="5"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button Content="Előző" Margin="5" Padding="5" Width="100" Click="Elozo_Click"/>
-                <Button Content="Válasz mentése" Margin="5" Padding="5" Width="100" Click="Valaszmentes_Click"/>
+                <Button Content="Válasz mentése" Margin="5" Padding="5" Width="120" Click="Valaszmentes_Click"/>
                 <Button Content="Következő" Margin="5" Padding="5" Width="100" Click="Kovetkezo_Click"/>
             </StackPanel>
         </StackPanel>
-        
     </Grid>
 </Window>
